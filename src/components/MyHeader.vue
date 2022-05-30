@@ -33,6 +33,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 header {
+  position: absolute;
+  transform: translate(-50%, 0);
+  top: 0;
+  left: 50%;
   height: 80px;
   img {
     height: 50px;
