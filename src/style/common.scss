@@ -30,6 +30,11 @@ h1 {
     font-weight: 300;
     margin: 0;
 }
+h2 {
+    font-size: 2.5rem;
+    color: inherit;
+    font-weight: 300;  
+}
 .text-blue {
     color: $pelorous;
 }
@@ -41,6 +46,9 @@ h1 {
     }
     &-large {
         width: 95vw;
+    }
+    &-small {
+        width: 680px;
     }
 }
 // Display 
