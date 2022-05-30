@@ -1,21 +1,20 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <HeaderJumbo />
+  </div>
 </template>
 
 <script>
+import HeaderJumbo from "./components/HeaderJumbo.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    HeaderJumbo,
+  },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./style/common.scss";
+@import "./style/variables.scss";
 </style>

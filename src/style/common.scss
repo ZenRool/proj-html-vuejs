@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import "./variables.scss";
+// RESET 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $firefly;
+}
+img {
+    width: 100%;
+}
+li {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+// Containers 
+.container {
+    margin: 0 auto;
+    &-regular {
+        width: 1180px;
+    }
+    &-large {
+        width: 95vw;
+    }
+}
+// Display 
+.d {
+    &-none {
+        display: none !important;
+    }
+    &-flex {
+        display: flex;
+    }
+}
+// Justify Content
+.justify-content {
+    &-center {
+        justify-content: center;
+    }
+    &-between {
+        justify-content: space-between;
+    }
+    &-around {
+        justify-content: space-around;
+    }
+}
+// Align items
+.align-items {
+    &-center {
+        align-items: center;
+    }
+}
+// btn
+.button-blue {
+    background-color: $pelorous;
+    padding: 0 1.5rem;
+    &:hover {
+      background-color: $pelorous-vibrant;
+      a {  
+        color: white;
+      } 
+    } 
+}
