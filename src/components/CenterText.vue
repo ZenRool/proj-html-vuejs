@@ -7,7 +7,7 @@
       :src="require(`../assets/images/icon-${elem.icon}.png`)"
       alt="icon"
     />
-    <h2>{{ elem.title }}</h2>
+    <h2 :class="{ caps: elem.icon !== 0 }">{{ elem.title }}</h2>
     <div v-if="elem.line" class="line"></div>
     <p>{{ elem.paragraph }}</p>
   </div>
@@ -31,20 +31,23 @@ export default {
   margin: 1.2rem 0;
   text-align: center;
 }
-div {
-  margin-top: 3rem;
+.center-text {
+  padding-top: 3rem;
   p {
-    line-height: 2.3rem;
-    font-size: 1.2rem;
+    line-height: 2.5rem;
+    font-size: 1.1rem;
   }
   .line {
     height: 0;
     width: 50%;
-    border: 1px solid $reven;
+    border-bottom: 1px solid $reven;
   }
   img {
     width: 80px;
     height: 80px;
+  }
+  .caps {
+    text-transform: uppercase;
   }
 }
 </style>

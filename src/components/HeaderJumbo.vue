@@ -34,7 +34,7 @@ div {
   height: 100%;
   p {
     font-size: 1.4rem;
-    width: 82%;
+    width: 70%;
   }
   .button-blue {
     padding-top: 0.5rem;
