@@ -35,6 +35,12 @@ h2 {
     color: inherit;
     font-weight: 300;  
 }
+h3 {
+    font-size: 1.1rem;
+    color: inherit;
+    font-weight: 300;  
+    text-transform: uppercase;
+}
 .text-blue {
     color: $pelorous;
 }
@@ -42,7 +48,7 @@ h2 {
 .container {
     margin: 0 auto;
     &-regular {
-        width: 980px;
+        width: 1100px;
     }
     &-large {
         width: 95vw;
