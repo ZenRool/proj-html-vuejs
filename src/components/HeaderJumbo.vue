@@ -28,6 +28,8 @@ export default {
 section {
   height: 860px; // ?
   background-image: url("../assets/images/header-image-homepage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
 }
 div {

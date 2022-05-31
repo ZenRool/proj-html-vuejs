@@ -10,12 +10,29 @@
       <h3>{{ elem.docName }}</h3>
       <p class="title">{{ elem.title }}</p>
       <p class="paragraph">{{ elem.paragraph }}</p>
+      <div class="d-flex my-1">
+        <SocialSquere
+          v-for="(social, index) in this.socials"
+          :key="index"
+          :social="social"
+          class="mr-1"
+        />
+      </div>
     </div>
   </div>
 </template>
 <script>
+import SocialSquere from "./SocialSquere.vue";
 export default {
   name: "CenterText",
+  components: {
+    SocialSquere,
+  },
+  data: function () {
+    return {
+      socials: ["facebook", "twitter", "instagram"],
+    };
+  },
   props: {
     elem: {
       doctor: Number,
@@ -41,7 +58,7 @@ export default {
     }
   }
   .info {
-    padding: 1.6rem;
+    padding: 1.8rem;
     h3 {
       margin: 0.8rem 0;
     }
