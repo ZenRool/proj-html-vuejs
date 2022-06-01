@@ -60,7 +60,7 @@ export default {
     font-size: 1.1rem;
     cursor: pointer;
     &:hover {
-      background-color: $pelorous-vibrant;
+      background-color: rgba($color: #000000, $alpha: 0.1);
       border-color: gallery;
       color: gallery;
     }

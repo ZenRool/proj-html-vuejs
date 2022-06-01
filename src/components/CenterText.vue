@@ -34,8 +34,8 @@ export default {
 .center-text {
   padding-top: 1rem;
   p {
-    line-height: 2.5rem;
-    font-size: 1.1rem;
+    line-height: 3.2rem;
+    font-size: 1.4rem;
   }
   .line {
     height: 0;

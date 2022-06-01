@@ -29,7 +29,7 @@
         />
       </div>
     </section>
-    <section class="tour">
+    <section class="tour bg-image">
       <CenterText :elem="this.bigElement[3]" />
       <div class="play-btn">
         <img src="../assets/images/play-icon.png" alt="" />
@@ -42,6 +42,12 @@
         :elem="elem"
       />
     </section>
+    <section class="appointment bg-image">
+      <CenterText :elem="this.bigElement[4]" />
+      <FormAppointment
+        class="container container-small d-flex wrap justify-content-between"
+      />
+    </section>
   </main>
 </template>
 <script>
@@ -49,13 +55,15 @@ import CenterText from "./CenterText.vue";
 import MiniCenterText from "./MiniCenterText.vue";
 import CardiogramText from "./CardiogramText.vue";
 import DocCard from "./DocCard.vue";
+import FormAppointment from "./FormAppointment.vue";
 export default {
   name: "MyMain",
   components: {
     CenterText,
     MiniCenterText,
-    DocCard,
     CardiogramText,
+    DocCard,
+    FormAppointment,
   },
   data: function () {
     return {
@@ -84,6 +92,13 @@ export default {
         {
           icon: 7,
           title: "tour our facilities",
+          line: true,
+          paragraph:
+            "Sed ut perspiciatis unde omnis iste naus error sit voluptatem accusatium doloremque ladantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae",
+        },
+        {
+          icon: 0,
+          title: "Make An Appointment",
           line: true,
           paragraph:
             "Sed ut perspiciatis unde omnis iste naus error sit voluptatem accusatium doloremque ladantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae",
@@ -209,6 +224,11 @@ main {
     }
     &.tour {
       background: url("../assets/images/paralax-bg-tour-facilities.jpg");
+    }
+    &.appointment {
+      background: url("../assets/images/make-an-appointment.jpg");
+    }
+    &.bg-image {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
