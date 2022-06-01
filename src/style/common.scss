@@ -30,6 +30,9 @@ a {
 .mr-1 {
     margin-right: 0.8rem;
 }
+.p-0 {
+    padding: 0 !important;
+}
 // Titles 
 h1 {
     font-size: 4.5rem;
@@ -42,10 +45,15 @@ h2 {
     font-weight: 300;  
 }
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: inherit;
     font-weight: 300;  
     text-transform: uppercase;
+}
+h4 {
+    font-size: 1.1rem;
+    color: inherit;
+    font-weight: 400;
 }
 // Text color 
 .text-blue {

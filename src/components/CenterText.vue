@@ -32,7 +32,7 @@ export default {
   text-align: center;
 }
 .center-text {
-  padding-top: 3rem;
+  padding-top: 1rem;
   p {
     line-height: 2.5rem;
     font-size: 1.1rem;
@@ -41,6 +41,7 @@ export default {
     height: 0;
     width: 50%;
     border-bottom: 1px solid $reven;
+    border-bottom-color: currentColor;
   }
   img {
     width: 80px;

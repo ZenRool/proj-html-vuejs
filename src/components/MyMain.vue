@@ -29,11 +29,25 @@
         />
       </div>
     </section>
+    <section class="tour">
+      <CenterText :elem="this.bigElement[3]" />
+      <div class="play-btn">
+        <img src="../assets/images/play-icon.png" alt="" />
+      </div>
+    </section>
+    <section class="p-0 d-flex">
+      <CardiogramText
+        v-for="(elem, index) in cardiograms"
+        :key="index"
+        :elem="elem"
+      />
+    </section>
   </main>
 </template>
 <script>
 import CenterText from "./CenterText.vue";
 import MiniCenterText from "./MiniCenterText.vue";
+import CardiogramText from "./CardiogramText.vue";
 import DocCard from "./DocCard.vue";
 export default {
   name: "MyMain",
@@ -41,6 +55,7 @@ export default {
     CenterText,
     MiniCenterText,
     DocCard,
+    CardiogramText,
   },
   data: function () {
     return {
@@ -62,6 +77,13 @@ export default {
         {
           icon: 6,
           title: "our healthservices",
+          line: true,
+          paragraph:
+            "Sed ut perspiciatis unde omnis iste naus error sit voluptatem accusatium doloremque ladantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae",
+        },
+        {
+          icon: 7,
+          title: "tour our facilities",
           line: true,
           paragraph:
             "Sed ut perspiciatis unde omnis iste naus error sit voluptatem accusatium doloremque ladantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae",
@@ -154,6 +176,26 @@ export default {
             "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis prasentium voluptatum deleniti atque",
         },
       ],
+      cardiograms: [
+        {
+          title: "Emergency Care",
+          paragraph:
+            "Sed ut perspiciatis unde omnis iste naus error sit voluptatem accusatium doloremque ladantium, totam rem aperiam, eaque",
+          color: "pelorous",
+        },
+        {
+          title: "Ecpert Diagnostics",
+          paragraph:
+            "Sed ut perspiciatis unde omnis iste naus error sit voluptatem accusatium doloremque ladantium, totam rem aperiam, eaque",
+          color: "pelorous-variant",
+        },
+        {
+          title: "Superb Rehabilitaton",
+          paragraph:
+            "Sed ut perspiciatis unde omnis iste naus error sit voluptatem accusatium doloremque ladantium, totam rem aperiam, eaque",
+          color: "pelorous-dark",
+        },
+      ],
     };
   },
 };
@@ -161,9 +203,30 @@ export default {
 <style lang="scss" scoped>
 main {
   section {
-    padding: 2rem 0;
+    padding: 5.5rem 0;
     .third {
       width: calc(100% / 3);
+    }
+    &.tour {
+      background: url("../assets/images/paralax-bg-tour-facilities.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      .play-btn {
+        height: 80px;
+        width: 100%;
+        text-align: center;
+        margin: 40px auto;
+        cursor: pointer;
+        &:hover {
+          filter: brightness(120%);
+        }
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
     }
   }
 }
