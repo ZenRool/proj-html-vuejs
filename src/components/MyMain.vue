@@ -48,6 +48,9 @@
         class="container container-small d-flex wrap justify-content-between"
       />
     </section>
+    <section class="clients">
+      <ClientLogos />
+    </section>
   </main>
 </template>
 <script>
@@ -56,6 +59,7 @@ import MiniCenterText from "./MiniCenterText.vue";
 import CardiogramText from "./CardiogramText.vue";
 import DocCard from "./DocCard.vue";
 import FormAppointment from "./FormAppointment.vue";
+import ClientLogos from "./ClientLogos.vue";
 export default {
   name: "MyMain",
   components: {
@@ -64,6 +68,7 @@ export default {
     CardiogramText,
     DocCard,
     FormAppointment,
+    ClientLogos,
   },
   data: function () {
     return {
@@ -227,6 +232,9 @@ main {
     }
     &.appointment {
       background: url("../assets/images/make-an-appointment.jpg");
+    }
+    &.clients {
+      background: url("../assets/images/rgb-gradient-bar-for-logo-carrasel.jpg");
     }
     &.bg-image {
       background-position: center;
