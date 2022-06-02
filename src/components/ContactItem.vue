@@ -7,10 +7,7 @@
 export default {
   name: "ContactItem",
   props: {
-    elem: {
-      type: String,
-      value: String,
-    },
+    elem: Object,
   },
 };
 </script>

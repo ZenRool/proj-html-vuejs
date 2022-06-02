@@ -46,6 +46,14 @@
         <div class="learn my-1">view our Deparments</div>
       </section>
     </div>
+    <section class="footer-bottom">
+      <div class="container container-large">
+        <span v-for="(elem, index) of this.creators" :key="index">
+          {{ elem }}
+          <span v-if="index !== Object.keys(creators).length - 1"> | </span>
+        </span>
+      </div>
+    </section>
   </footer>
 </template>
 <script>
@@ -78,6 +86,13 @@ export default {
         "Diabets Care",
         "Pre-natal Care",
         "Ultrasoud echogram",
+      ],
+      creators: [
+        "© Copyright 2018-2022",
+        "Avada Theme by Theme fution",
+        "All Right Reserved",
+        "Powered by Booleaners",
+        "Lorenzo Papperini",
       ],
     };
   },
@@ -119,5 +134,10 @@ export default {
     text-align: center;
     padding: 1rem 0;
   }
+}
+.footer-bottom {
+  background: $ligthgray;
+  color: $reven;
+  padding: 1rem 0;
 }
 </style>
