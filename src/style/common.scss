@@ -122,6 +122,9 @@ h4 {
         flex-wrap: nowrap;
     }
 }
+.third {
+    width: calc(100% / 3);
+}
 // btn
 .button-blue {
     background-color: $pelorous;
