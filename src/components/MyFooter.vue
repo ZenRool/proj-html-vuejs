@@ -14,7 +14,7 @@
           laudaien. Lorem ipsum sits dolores ets unser.
         </p>
         <div class="line"></div>
-        <div class="learn">learn more about us</div>
+        <div class="us">learn more about us</div>
         <div class="my-1 d-flex">
           <SocialSquere
             v-for="(social, index) in this.socials"
@@ -35,17 +35,29 @@
           />
         </ul>
       </section>
+      <section class="third">
+        <h3>Medical Departments</h3>
+        <div class="line-small"></div>
+        <DepartItem
+          v-for="(item, index) in this.departs"
+          :key="index"
+          :elem="item"
+        />
+        <div class="learn my-1">view our Deparments</div>
+      </section>
     </div>
   </footer>
 </template>
 <script>
 import SocialSquere from "./SocialSquere.vue";
 import ContactItem from "./ContactItem.vue";
+import DepartItem from "./DepartItem.vue";
 export default {
   name: "App",
   components: {
     SocialSquere,
     ContactItem,
+    DepartItem,
   },
   data: function () {
     return {
@@ -59,6 +71,13 @@ export default {
           type: "phone-flip",
           value: "1.800.458.556",
         },
+      ],
+      departs: [
+        "Cardiology",
+        "Pediatrics",
+        "Diabets Care",
+        "Pre-natal Care",
+        "Ultrasoud echogram",
       ],
     };
   },
@@ -89,10 +108,16 @@ export default {
       margin: 2rem 0;
     }
   }
-  .learn {
+  .us {
     text-transform: uppercase;
     font-size: 1.1rem;
     margin: 0.5rem 0;
+  }
+  .learn {
+    border-color: $firefly;
+    width: 80%;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 </style>

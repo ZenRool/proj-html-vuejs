@@ -1,6 +1,6 @@
 <template>
   <div
-    class="cardiogram container container-small d-flex align-items-center flex-column"
+    class="cardiogram container third d-flex align-items-center flex-column"
     :class="elem.color"
   >
     <h4>{{ elem.title }}</h4>
@@ -52,18 +52,6 @@ export default {
   img {
     width: 100px;
     height: 30px;
-  }
-  .learn {
-    text-transform: uppercase;
-    border: 2px solid white;
-    padding: 0.8rem 2.5rem;
-    font-size: 1.1rem;
-    cursor: pointer;
-    &:hover {
-      background-color: rgba($color: #000000, $alpha: 0.1);
-      border-color: gallery;
-      color: gallery;
-    }
   }
 }
 </style>

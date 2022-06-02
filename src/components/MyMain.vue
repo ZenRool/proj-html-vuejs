@@ -48,7 +48,7 @@
         class="container container-small d-flex wrap justify-content-between"
       />
     </section>
-    <section class="clients">
+    <section class="clients bg-image">
       <ClientLogos />
     </section>
   </main>
@@ -224,9 +224,6 @@ export default {
 main {
   section {
     padding: 5.5rem 0;
-    .third {
-      width: calc(100% / 3);
-    }
     &.tour {
       background: url("../assets/images/paralax-bg-tour-facilities.jpg");
     }
