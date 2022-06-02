@@ -5,7 +5,6 @@
     <MyFooter />
   </div>
 </template>
-
 <script>
 import HeaderJumbo from "./components/HeaderJumbo.vue";
 import MyMain from "./components/MyMain.vue";
@@ -19,7 +18,6 @@ export default {
   },
 };
 </script>
-
 <style lang="scss">
 @import "./style/common.scss";
 @import "./style/variables.scss";

@@ -24,27 +24,53 @@
           />
         </div>
       </section>
+      <section class="third">
+        <h3>Contact Information</h3>
+        <div class="line-small"></div>
+        <ul>
+          <ContactItem
+            v-for="(item, index) in this.contacts"
+            :key="index"
+            :elem="item"
+          />
+        </ul>
+      </section>
     </div>
   </footer>
 </template>
 <script>
 import SocialSquere from "./SocialSquere.vue";
+import ContactItem from "./ContactItem.vue";
 export default {
   name: "App",
   components: {
     SocialSquere,
+    ContactItem,
   },
   data: function () {
     return {
       socials: ["facebook", "twitter", "instagram", "youtube"],
+      contacts: [
+        {
+          type: "map-marker-alt",
+          value: "121 King Street, London United Kingdom",
+        },
+        {
+          type: "phone-flip",
+          value: "1.800.458.556",
+        },
+      ],
     };
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../style/variables.scss";
 .footer-top {
   padding: 4rem 0;
+  .third {
+    padding: 1rem;
+  }
   img {
     max-height: 100px;
     width: auto;
@@ -57,6 +83,11 @@ export default {
   .line {
     width: 100%;
     border-bottom: 1px solid $river-bed;
+    &-small {
+      width: 10%;
+      border-bottom: 2px solid $pelorous;
+      margin: 2rem 0;
+    }
   }
   .learn {
     text-transform: uppercase;
